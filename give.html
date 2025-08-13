@@ -11,29 +11,35 @@
             margin: 0;
             background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
         }
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 1rem;
+            padding: 1.5rem;
             text-align: center;
         }
         nav {
             background: #333;
-            padding: 0.5rem;
-            text-align: center;
+            padding: 0.7rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
         }
         nav a {
             color: white;
-            margin: 0 1rem;
             text-decoration: none;
             font-weight: bold;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            transition: background 0.3s ease;
         }
         nav a:hover {
-            text-decoration: underline;
+            background: #555;
         }
         main {
-            max-width: 800px;
+            max-width: 900px;
             margin: 2rem auto;
             background: white;
             padding: 2rem;
@@ -43,23 +49,30 @@
         h1 {
             text-align: center;
             color: #4CAF50;
+            font-size: 2rem;
         }
         .scripture {
             font-style: italic;
             text-align: center;
             margin-bottom: 2rem;
             color: #555;
+            font-size: 1.1rem;
         }
         .giving-option {
             border: 1px solid #ddd;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 5px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
             background: #fefefe;
+            transition: transform 0.3s ease;
+        }
+        .giving-option:hover {
+            transform: translateY(-3px);
         }
         .giving-option h2 {
             margin-top: 0;
             color: #4CAF50;
+            font-size: 1.4rem;
         }
         footer {
             background: #333;
@@ -67,9 +80,26 @@
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
+            font-size: 0.9rem;
         }
-        @media (max-width: 600px) {
+        /* Mobile Friendly */
+        @media (max-width: 768px) {
             main {
+                padding: 1rem;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .giving-option {
                 padding: 1rem;
             }
         }
@@ -91,7 +121,10 @@
     </nav>
 
     <main>
-        <p class="scripture">"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." — 2 Corinthians 9:7</p>
+        <p class="scripture">
+            "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, 
+            for God loves a cheerful giver." — 2 Corinthians 9:7
+        </p>
         
         <div class="giving-option">
             <h2>Bank Transfer</h2>
@@ -110,7 +143,9 @@
         <div class="giving-option">
             <h2>Online Giving</h2>
             <p>You can also give securely through PayPal.</p>
-            <a href="https://paypal.me/yourchurchlink" target="_blank" style="color: #4CAF50; font-weight: bold;">Give via PayPal</a>
+            <a href="https://paypal.me/yourchurchlink" target="_blank" style="color: #4CAF50; font-weight: bold;">
+                Give via PayPal
+            </a>
         </div>
     </main>
 
@@ -120,3 +155,4 @@
 
 </body>
 </html>
+
