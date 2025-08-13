@@ -7,57 +7,107 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Background image for the whole page */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: 
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), /* dark overlay */
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
         url('images/pngwin.png') no-repeat center center fixed;
       background-size: cover;
-      color: white; /* Makes text easier to read on dark overlay */
-    }
-
-    /* Page-specific styling */
-    .ministries-section {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
-    .ministry {
-      background: rgba(255, 255, 255, 0.9);
-      color: #2c3e50;
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .ministry h3 {
-      margin-bottom: 10px;
-    }
-    .ministry p {
-      line-height: 1.6;
+      color: white;
     }
 
     header {
       text-align: center;
       padding: 40px 20px;
     }
+
+    nav {
+      margin-top: 20px;
+    }
+
     nav ul {
       list-style: none;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
+
     nav ul li {
-      display: inline;
-      margin: 0 10px;
+      margin: 5px 10px;
     }
+
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
     }
+
     nav ul li a:hover {
-      text-decoration: underline;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .ministries-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .ministry {
+      background: rgba(255, 255, 255, 0.95);
+      color: #2c3e50;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .ministry h3 {
+      margin-bottom: 10px;
+    }
+
+    .ministry p {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* 📱 Mobile responsiveness */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px 10px;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 5px 0;
+      }
+      .ministries-section {
+        padding: 10px;
+      }
+      .ministry {
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
@@ -65,7 +115,7 @@
 
   <header>
     <h1>Our Ministries</h1>
-    <p>Serving God and our community through various ministries.</p>
+   
 
     <nav>
         <ul>
@@ -80,8 +130,6 @@
   </header>
 
   <main class="ministries-section">
-    
-
     <div class="ministry">
       <h3>Children’s Ministry</h3>
       <p>We provide Bible-based teaching, fun activities, and care for children during our services. Our goal is to help children grow in faith and love for God.</p>
@@ -111,11 +159,12 @@
       <h3>Community Outreach</h3>
       <p>Serving our neighborhood through evangelism, and helping the needy.</p>
     </div>
-
   </main>
+
   <footer>
     <small>&copy; 2025 Kabi. All rights reserved.</small>
   </footer>
 
 </body>
 </html>
+
