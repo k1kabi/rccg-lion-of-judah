@@ -27,27 +27,65 @@
     .sermon p {
       line-height: 1.6;
     }
-    iframe {
-      width: 100%;
-      height: 315px;
+    /* Make embedded videos responsive */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
       border-radius: 8px;
-      margin-top: 10px;
     }
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    /* Responsive audio */
     audio {
       width: 100%;
       margin-top: 10px;
+    }
+    /* Mobile nav adjustments */
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      gap: 10px;
+    }
+    nav ul li {
+      flex: 1 1 auto;
+      text-align: center;
+    }
+    nav a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: #333;
+    }
+    nav a.active {
+      font-weight: bold;
+      color: #007bff;
+    }
+    @media (max-width: 576px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      header p {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
 
-
-
-  <header>
+  <header class="text-center p-3">
     <h1>Our Sermons</h1>
-    <p>Be inspired and grow in your faith by listening to our latest messages.</p>
+    
 
-      <!-- Navigation -->
+    <!-- Navigation -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -65,7 +103,9 @@
     <div class="sermon">
       <h3>The Power of Faith</h3>
       <p>Pastor John Doe - July 28, 2025</p>
-      <iframe src="https://www.youtube.com/embed/SAMPLE_VIDEO_ID" title="The Power of Faith"></iframe>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/SAMPLE_VIDEO_ID" title="The Power of Faith" allowfullscreen></iframe>
+      </div>
     </div>
 
     <div class="sermon">
@@ -80,13 +120,18 @@
     <div class="sermon">
       <h3>Living with Purpose</h3>
       <p>Guest Speaker: Rev. Paul - July 14, 2025</p>
-      <iframe src="https://www.youtube.com/embed/SAMPLE_VIDEO_ID2" title="Living with Purpose"></iframe>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/SAMPLE_VIDEO_ID2" title="Living with Purpose" allowfullscreen></iframe>
+      </div>
     </div>
 
   </main>
-  <footer>
+
+  <footer class="text-center p-3">
     <small>&copy; 2025 Kabi. All rights reserved.</small>
   </footer>
 
+  <script src="js/bootstrap.js"></script>
 </body>
 </html>
+
