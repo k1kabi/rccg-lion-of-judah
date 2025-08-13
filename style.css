@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    background-image: url('images/pngwing.co.png'); /* Change to your image path */
+    background-size: contain; /* Shows full image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-position: center; /* Keeps image centered */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    background: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+/* INFO SECTION */
+.info {
+    display: flex;
+    justify-content: space-around;
+    background: #ecf0f1;
+    padding: 2rem 1rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.info-card h2 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* SERMON SECTION */
+.sermon {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.sermon h2 {
+    margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-card {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+}
