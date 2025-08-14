@@ -95,26 +95,55 @@
             <img src="images/logo.JPG" alt="RCCG Lion Of Judah Logo" style="height:50px;">
             <span class="ms-2">RCCG Lion Of Judah</span>
         </div>
-        <nav>
-            <ul class="d-flex flex-wrap justify-content-center">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="ministries.html">Ministries</a></li>
-                <li><a href="sermons.html">Sermons</a></li>
-                <li><a href="give.html">Give</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+       <!-- Bootstrap Responsive Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" href="index.html"></a>
+
+    <!-- Hamburger Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="ministries.html">Ministries</a></li>
+        <li class="nav-item"><a class="nav-link" href="sermons.html">Sermons</a></li>
+        <li class="nav-item"><a class="nav-link" href="give.html">Give</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS (needed for hamburger to work) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to RCCG Lion Of Judah</h1>
-            <p>Join us this Sunday at 10 AM for worship and fellowship.</p>
-            <a href="#" class="btn btn-primary">Watch Live</a>
-        </div>
-    </section>
+   <section class="hero" style="
+       background-image: url('images/pngwing.co.png'); 
+       background-size: contain; 
+       background-position: center; 
+       background-repeat: no-repeat; 
+       background-color: #000; /* fallback background */
+       color: white; 
+       text-align: center; 
+       padding: 80px 20px;
+       min-height: 400px; /* ensures enough space for the image */
+    ">
+       <div class="hero-content" style="background-color: rgba(0,0,0,0.5); padding: 20px; border-radius: 10px;">
+         <h1>Welcome to RCCG Lion Of Judah</h1>
+         <p>Join us this Sunday at 10 AM for worship and fellowship.</p>
+         <a href="#" class="btn btn-primary">Watch Live</a>
+       </div>
+   </section>
+
 
     <!-- QUICK INFO -->
     <section class="info">
@@ -151,4 +180,5 @@
 
 </body>
 </html>
+
 
